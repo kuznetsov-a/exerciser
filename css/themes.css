@@ -1,0 +1,73 @@
+/* Light Theme (default) */
+.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.light-theme .tab-btn {
+    color: #333333;
+}
+
+.light-theme .primary-btn {
+    background-color: #4a90e2;
+}
+
+.light-theme .control-btn {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+.light-theme .timer {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+.light-theme .exercise-group-header {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+.light-theme .exercise-item {
+    border-bottom-color: #eeeeee;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #222222;
+    color: #f0f0f0;
+}
+
+.dark-theme .tab-btn {
+    color: #f0f0f0;
+}
+
+.dark-theme .primary-btn {
+    background-color: #2d6bc4;
+}
+
+.dark-theme .control-btn {
+    background-color: #444444;
+    color: #f0f0f0;
+}
+
+.dark-theme .timer {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+.dark-theme .exercise-group-header {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+.dark-theme .exercise-group {
+    border-color: #444444;
+}
+
+.dark-theme .exercise-item {
+    border-bottom-color: #444444;
+}
+
+.dark-theme .slider {
+    background-color: #444444;
+} 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Exercise Timer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body class="light-theme">
+    <div class="app-container">
+        <header>
+            <h1>Random Exercise Timer</h1>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">Toggle Theme</button>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="timer-tab">Timer</button>
+            <button class="tab-btn" data-tab="exercises-tab">Exercises</button>
+        </div>
+
+        <main>
+            <!-- Timer Tab -->
+            <section id="timer-tab" class="tab-content active">
+                <div class="controls-container">
+                    <div class="slider-container">
+                        <label for="exercise-time">Exercise Time: <span id="exercise-time-value">30</span> sec</label>
+                        <input type="range" id="exercise-time" min="10" max="120" value="30" class="slider">
+                    </div>
+                    <div class="slider-container">
+                        <label for="rest-time">Rest Time: <span id="rest-time-value">15</span> sec</label>
+                        <input type="range" id="rest-time" min="5" max="60" value="15" class="slider">
+                    </div>
+                    <button id="start-btn" class="primary-btn">Start</button>
+                </div>
+
+                <div id="timer-display" class="hidden">
+                    <div class="exercise-info">
+                        <h2 id="current-state">Exercise</h2>
+                        <h3 id="current-exercise-name">Jumping Jacks</h3>
+                    </div>
+                    <div class="timer-container">
+                        <div id="animation-container">
+                            <!-- SVG animation will be loaded here -->
+                        </div>
+                        <div id="timer" class="timer">30</div>
+                    </div>
+                    <div class="timer-controls">
+                        <button id="pause-btn" class="control-btn">Pause</button>
+                        <button id="resume-btn" class="control-btn hidden">Resume</button>
+                        <button id="stop-btn" class="control-btn">Stop</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exercises Tab -->
+            <section id="exercises-tab" class="tab-content">
+                <div class="exercises-controls">
+                    <button id="select-all-btn">Select All</button>
+                    <button id="deselect-all-btn">Deselect All</button>
+                </div>
+                <div id="exercise-groups">
+                    <!-- Exercise groups will be populated here via JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/exercises.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>  
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MEASUREMENT-ID');
+    </script>
+</body>
+</html> 

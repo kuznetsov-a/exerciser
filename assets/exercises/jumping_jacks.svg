@@ -1,0 +1,24 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="30" r="10" fill="#333"/>
+  <line x1="50" y1="40" x2="50" y2="70" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="50" x2="30" y2="60" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="50" x2="70" y2="60" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="70" x2="30" y2="90" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="70" x2="70" y2="90" stroke="black" stroke-width="2"/>
+  
+  <!-- Animation -->
+  <style>
+    @keyframes jumpingJacks {
+      0%, 100% {
+        transform: scale(0.8);
+      }
+      50% {
+        transform: scale(1);
+      }
+    }
+    
+    svg {
+      animation: jumpingJacks 1s ease-in-out infinite;
+    }
+  </style>
+</svg> 
