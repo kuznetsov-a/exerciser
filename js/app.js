@@ -14,13 +14,19 @@ class ExerciseApp {
         if (this.initialized) return;
         
         // Check if all required components are loaded
-        if (typeof exerciseManager === 'undefined' || 
-            typeof exerciseTimer === 'undefined' || 
-            typeof uiManager === 'undefined') {
+        if (typeof window.exerciseManager === 'undefined' ||
+            typeof window.exerciseTimer === 'undefined' ||
+            typeof window.uiManager === 'undefined') {
             
             console.error('App initialization failed: required components not loaded');
             return;
         }
+
+        window.uiManager.applyTheme(window.uiManager.currentTheme);
+        window.uiManager.initializeEventListeners();
+        window.exerciseManager.initializeExerciseList();
+        window.exerciseTimer.initializeEventListeners();
+        window.exerciseTimer.loadSettings();
         
         console.log('Exercise Timer App initialized successfully');
         this.initialized = true;
@@ -36,4 +42,4 @@ class ExerciseApp {
 }
 
 // Initialize the app
-const app = new ExerciseApp(); 
+const app = new ExerciseApp();

@@ -40,7 +40,6 @@ class ExerciseManager {
     constructor() {
         this.exerciseGroups = exerciseData;
         this.selectedExercises = this.loadSelectedExercises();
-        this.initializeExerciseList();
     }
 
     // Initialize exercises tab with data
@@ -294,13 +293,4 @@ function createSampleSVGs() {
 }
 
 // Export exercises
-let exerciseManager;
-
-// Initialize exercises when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    exerciseManager = new ExerciseManager();
-    
-    // Only for development, create sample SVGs
-    // In a real environment, you would create these files manually or with a build process
-    createSampleSVGs();
-}); 
+window.exerciseManager = new ExerciseManager();

@@ -6,13 +6,6 @@ class UIManager {
         
         // Initialize tabs
         this.activeTab = 'timer-tab';
-        
-        // Initialize event listeners after DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            this.applyTheme(this.currentTheme);
-            this.initializeEventListeners();
-            console.log('UI Manager initialized');
-        });
     }
     
     // Initialize event listeners
@@ -81,4 +74,4 @@ class UIManager {
 }
 
 // Initialize UI Manager
-const uiManager = new UIManager(); 
+window.uiManager = new UIManager();

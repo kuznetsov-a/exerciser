@@ -11,17 +11,10 @@ class ExerciseTimer {
         this.currentExercise = null;
         
         // DOM elements
-        this.timerDisplay = document.getElementById('timer');
-        this.currentStateDisplay = document.getElementById('current-state');
-        this.currentExerciseDisplay = document.getElementById('current-exercise-name');
-        this.animationContainer = document.getElementById('animation-container');
-        
-        // Initialize event listeners after DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            this.initializeEventListeners();
-            this.loadSettings();
-            console.log('Timer initialized');
-        });
+        this.timerDisplay = null;
+        this.currentStateDisplay = null;
+        this.currentExerciseDisplay = null;
+        this.animationContainer = null;
         
         // Visibility change event to detect when browser tab is changed
         document.addEventListener('visibilitychange', () => {
@@ -34,6 +27,12 @@ class ExerciseTimer {
     
     // Initialize event listeners
     initializeEventListeners() {
+        // DOM elements
+        this.timerDisplay = document.getElementById('timer');
+        this.currentStateDisplay = document.getElementById('current-state');
+        this.currentExerciseDisplay = document.getElementById('current-exercise-name');
+        this.animationContainer = document.getElementById('animation-container');
+
         // Slider inputs
         document.getElementById('exercise-time').addEventListener('input', (e) => {
             this.exerciseTime = parseInt(e.target.value);
@@ -307,8 +306,4 @@ class ExerciseTimer {
 }
 
 // Initialize timer
-let exerciseTimer;
-
-document.addEventListener('DOMContentLoaded', () => {
-    exerciseTimer = new ExerciseTimer();
-}); 
+window.exerciseTimer = new ExerciseTimer();
