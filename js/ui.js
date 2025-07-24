@@ -81,4 +81,4 @@ class UIManager {
 }
 
 // Initialize UI Manager
-const uiManager = new UIManager(); 
+window.uiManager = new UIManager();

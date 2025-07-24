@@ -14,9 +14,9 @@ class ExerciseApp {
         if (this.initialized) return;
         
         // Check if all required components are loaded
-        if (typeof exerciseManager === 'undefined' || 
-            typeof exerciseTimer === 'undefined' || 
-            typeof uiManager === 'undefined') {
+        if (typeof window.exerciseManager === 'undefined' ||
+            typeof window.exerciseTimer === 'undefined' ||
+            typeof window.uiManager === 'undefined') {
             
             console.error('App initialization failed: required components not loaded');
             return;

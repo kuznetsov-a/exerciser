@@ -307,8 +307,4 @@ class ExerciseTimer {
 }
 
 // Initialize timer
-let exerciseTimer;
-
-document.addEventListener('DOMContentLoaded', () => {
-    exerciseTimer = new ExerciseTimer();
-}); 
+window.exerciseTimer = new ExerciseTimer();
